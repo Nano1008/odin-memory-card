@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Scoreboard from "./components/Scoreboard";
 
 import "./App.css";
 
 function App() {
   const [cards, setCards] = useState([]);
+  const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   useEffect(() => {
     const fetchCards = async () => {
@@ -34,6 +37,7 @@ function App() {
   return (
     <div className="App">
       <h1>Memory Card Game</h1>
+      <Scoreboard score={score} bestScore={bestScore} />
     </div>
   );
 }
