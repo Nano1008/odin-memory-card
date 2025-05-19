@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Scoreboard from "./components/Scoreboard";
+import CardGrid from "./components/CardGrid";
 
 import "./App.css";
 
@@ -38,6 +39,7 @@ function App() {
     <div className="App">
       <h1>Memory Card Game</h1>
       <Scoreboard score={score} bestScore={bestScore} />
+      <CardGrid cards={cards} onCardClick={() => {}} />
     </div>
   );
 }
